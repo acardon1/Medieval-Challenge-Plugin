@@ -1,7 +1,8 @@
-# Minecraft Plugins
+# Medieval Challenge Plugin
 
-Experimenting with coding in Java. 
-Specifically Minecraft and developing plugins.
+Making a plugin to assist my planned Minecraft Medieval Challenge. <br>
+Project started 12 Jan 2023. <br>
+For the rules and other information, [click here](https://docs.google.com/document/d/1WvnRlN2Eqs26xGJHROLCBEKuXWpTCi2dras7IRZdbmo/edit?usp=sharing  "Google Docs - Rulesheet").
 
 ## Planned Functionality
 - [ ] Voting for a Ruler
