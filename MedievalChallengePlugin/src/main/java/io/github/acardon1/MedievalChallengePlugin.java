@@ -1,8 +1,6 @@
 package io.github.acardon1;
 
-
-//think im making the scoreboard here?
-
+import io.github.acardon1.commandexecutors.MedievalTeams;
 import io.github.acardon1.eventlisteners.PlayerLifeListener;
 import org.bukkit.plugin.java.JavaPlugin;
 public class MedievalChallengePlugin extends JavaPlugin {
@@ -12,6 +10,7 @@ public class MedievalChallengePlugin extends JavaPlugin {
         //Plugin was enabled: implement startup + set up.
         saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new PlayerLifeListener(), this);
+        getServer().getPluginCommand("createteams").setExecutor(new MedievalTeams());
 
     }
 
