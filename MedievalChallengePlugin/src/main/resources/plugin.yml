@@ -1,10 +1,4 @@
-name: MedievalChallengePlugin
-version: ${1.0}
-main: io.github.acardon1.MedievalChallengePlugin
+name: MedievalSimulation
+version: '${project.version}'
+main: io.github.acardon1.medievalsimulation.MedievalSimulation
 api-version: 1.19
-# defining our commands.
-commands:
-
-  createteams:
-    description: creates 4 teams and randomly assigns all players with X amt of lives.
-    usage: /<command> <# of lives>

@@ -9,5 +9,8 @@
         <module name="MedievalChallengePlugin" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="MedievalChallengePlugin" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
