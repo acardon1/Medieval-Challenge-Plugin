@@ -16,5 +16,9 @@ public class MedievalTeams implements CommandExecutor {
         Team team2 = board.registerNewTeam("TeamB");
         Team team3 = board.registerNewTeam("TeamC");
         Team team4 = board.registerNewTeam("TeamD");
+        /*make lives for all teams (im taking in an arg for lives,
+        *but should prolly renamed to startgame or sm.)
+        */
+        //assign players amongst each team randomly -> 1 3 2 4
     }
 }

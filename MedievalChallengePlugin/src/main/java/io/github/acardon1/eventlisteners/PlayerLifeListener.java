@@ -14,7 +14,10 @@ public class PlayerLifeListener implements Listener {
     public void onPlayerDeath(EntityDeathEvent e) {
         Entity entity = e.getEntity();
         if(entity instanceof Player) {
-
+            //if (player has a team)
+                //player has lives
+                    //->subtract 1 from their lives
+                    //if their lives == 0, set their gamemode to spectator.
         }
 
     }
