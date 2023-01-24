@@ -13,5 +13,6 @@ public final class MedievalSimulation extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+
     }
 }
