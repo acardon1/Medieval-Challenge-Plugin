@@ -25,9 +25,11 @@ public class PlayerLifeListener implements Listener {
             Score lives = obj.getScore(player); //find number of lives for each player
             int newLives = lives.getScore() - 1; //new lives
 
-            //check to see if they are at 0 -> set spectator
+            //check to see if they are at or "below" -> set spectator
             if (newLives <= 0) {
                 player.setGameMode(GameMode.SPECTATOR);
+                lives.setScore(0);
+                player.setScoreboard(board);
             }
             else { //else update their lives
                 lives.setScore(newLives);
