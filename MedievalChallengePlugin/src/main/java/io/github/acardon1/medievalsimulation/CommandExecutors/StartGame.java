@@ -29,15 +29,8 @@ public class StartGame implements CommandExecutor {
          */
         if (args.length == 2) {
             //parse args
-            try {
-                int lifecount = Integer.parseInt(args[0]);
-                int teamcount = Integer.parseInt(args[1]);
-            } catch (Exception e) {
-                if(sender instanceof Player) {
-                    Player player = (Player) sender;
-                    player.sendMessage("Please use two integers, one for number of lives, one for number of teams.");
-                }
-            }
+            int lifecount = Integer.parseInt(args[0]);
+            int teamcount = Integer.parseInt(args[1]);
             //create scoreboard
             ScoreboardManager manager = Bukkit.getScoreboardManager();
             Scoreboard gameBoard = manager.getNewScoreboard();
@@ -47,9 +40,16 @@ public class StartGame implements CommandExecutor {
             Objective lives = gameBoard.registerNewObjective("lives", "dummy", "Lives Left");
             //this renders their lives as a number of hearts, isn't that cute
             lives.setRenderType(RenderType.HEARTS);
-            Score numLives;
 
-            //send scoreboard to all players
+            //set number of lives for each player
+            for (Player online : Bukkit.getOnlinePlayers()) {
+                Score numLives = lives.getScore(online);
+                numLives.setScore(lifecount);
+            }
+            //push number of lives and the scoreboard to all players
+            for (Player online : Bukkit.getOnlinePlayers()) {
+                online.setScoreboard(gameBoard);
+            }
             //distribute either randomly or uniformly idk how tho
 
             return true;
